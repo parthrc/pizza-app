@@ -8,12 +8,14 @@ function AppLayout() {
 
   const isLoading = navigation.state === "loading";
   return (
-    <div className="layout">
+    <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       {isLoading && <Spinner />}
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <div className="verflow-scroll">
+        <main className="o mx-auto my-auto max-w-3xl bg-red-500">
+          <Outlet />
+        </main>
+      </div>
       <CartOverview />
     </div>
   );
