@@ -11,8 +11,8 @@ function AppLayout() {
     <div className="grid h-screen grid-rows-[auto_1fr_auto]">
       {isLoading && <Spinner />}
       <Header />
-      <div className="verflow-scroll">
-        <main className="o mx-auto my-auto max-w-3xl bg-red-500">
+      <div className="overflow-scroll">
+        <main className=" mx-auto max-w-3xl">
           <Outlet />
         </main>
       </div>
