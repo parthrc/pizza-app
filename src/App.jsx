@@ -13,6 +13,7 @@ import Error from "./ui/Error.jsx";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
 
     children: [
       {
