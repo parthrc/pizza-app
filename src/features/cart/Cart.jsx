@@ -40,7 +40,7 @@ function Cart() {
 
       <ul className="mt-3 divide-y divide-stone-200 border-b">
         {cart.map((item) => (
-          <CartItem item={item} key={item.key} />
+          <CartItem item={item} key={item.pizzaId} />
         ))}
       </ul>
 
@@ -48,8 +48,7 @@ function Cart() {
         <Button to="/order/new" type="primary">
           Order pizzas
         </Button>
-          <Button type='secondary'>Clear cart</Button>
-
+        <Button type="secondary">Clear cart</Button>
       </div>
     </div>
   );
