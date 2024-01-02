@@ -9,6 +9,8 @@ import CreateOrder, {
 import Order, { loader as OrderLoader } from "./features/order/Order.jsx";
 import AppLayout from "./ui/AppLayout.jsx";
 import Error from "./ui/Error.jsx";
+import { action as updateOrderAction } from "./features/order/UpdateOrder.jsx";
+import { updateOrder } from "./services/apiRestaurant.js";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,7 @@ const router = createBrowserRouter([
         element: <Order />,
         loader: OrderLoader,
         errorElement: <Error />,
+        action: updateOrderAction,
       },
     ],
   },
